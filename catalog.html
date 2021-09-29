@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+
+  <body>
+    <header class="header-catalog">
+      <nav class="navigation-header">
+       <a class="navigation-logo" href="index.html">
+        <img class="logo-header" src="" alt="Логотип компании Девайс">
+       </a>
+
+        <p class="searching">
+          <form class="search" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="search-string" type="text" name="search-text" placeholder="Поиск по сайту">
+          <button class="search-button" type="submit">Найти</button>
+        </form>
+        </p>
+
+        <p class="catalog-header">
+          <a class="catalog-header-link" href="">Каталог товаров</a> <!--Не уверена, но мне кажется что здесь скорее всего ссылка и по клику пользователь переходит в раздел Каталога. При этом на макете видно, что есть плюсик и указано, что также раскрывается блок с категориями товаров, видимо при наведении на фразу "Каталог". Короче я что-то запуталась здесь ...-->
+        </p>
+
+        <ul class="navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Коля Петухов</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link-exit" href="#">Выйти</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+        </ul>
+
+        <button class="navigation-button" type="button">Корзина</button> <!--Кнопка, потому что при клике я так поняла появляется попап, а в нем уже есть кнопка переъода  корзину-->
+
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="delivery.html">Доставка</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="guarantee.html">Гарантия</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+      <header class="inner-header">
+      <h1 class="inner-header-title">Моноподы для селфи </h1>
+
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html/">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Моноподы для селфи</a>
+        </li>
+      </ul>
+      </header>
+
+      <section class="filters-list"></section>
+        <h2 class="filters">фильтр:</h2>
+
+       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость</legend>
+
+            <button class="range-toggle toggle-min" type="button">
+              <span class="visually-hidden">Изменить минимальную цену</span>
+            </button>
+            <button class="range-toggle toggle-max" type="button">
+              <span class="visually-hidden">Изменить максимальную цену</span>
+            </button>
+
+            <label class="catalog-filter-label">
+              от <input class="catalog-filter-input" type="number" name="min-price">
+            </label>
+
+            <label class="catalog-filter-label">
+              до <input class="catalog-filter-input" type="number" name="max-price">
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Цвет</legend>
+
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="color">
+                  <input class="visually-hidden color-input" type="checkbox" name="black" checked>
+                  <span class="color-mark"></span>
+                  <span class="color-label">Черный</span>
+                </label>
+              </li>
+
+              <li class="catalog-filter-item">
+                <label class="color">
+                  <input class="visually-hidden color-input" type="checkbox" name="white" checked>
+                  <span class="color-mark"></span>
+                  <span class="color-label">Белый</span>
+                </label>
+              </li>
+
+              <li class="catalog-filter-item">
+                <label class="color">
+                  <input class="visually-hidden color-input" type="checkbox" name="blue">
+                  <span class="color-mark"></span>
+                  <span class="color-label">Синий</span>
+                </label>
+              </li>
+
+              <li class="catalog-filter-item">
+                <label class="color">
+                  <input class="visually-hidden color-input" type="checkbox" name="red">
+                  <span class="color-mark"></span>
+                  <span class="color-label">Красный</span>
+                </label>
+              </li>
+
+              <li class="catalog-filter-item">
+                <label class="color">
+                  <input class="visually-hidden color-input" type="checkbox" name="pink">
+                  <span class="color-mark"></span>
+                  <span class="color-label">Розовый</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Bluetooth</legend>
+
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="presence-of-bluetooth">
+                  <input class="visually-hidden presence-of-bluetooth-input" type="radio" name="bluetooth" value="yes" checked>
+                  <span class="color-mark"></span>
+                  <span class="color-label">Есть</span>
+                </label>
+              </li>
+
+              <li class="catalog-filter-item">
+                <label class="presence-of-bluetooth">
+                  <input class="visually-hidden presence-of-bluetooth-input" type="radio" name="bluetooth" value="no">
+                  <span class="color-mark"></span>
+                  <span class="color-label">Нет</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button class="crossed-out" type="submit">Показать</button> <!--Вроде кнопка, но при нажатии вероятно урл меняется и в него добавляются пораметры фильтров. Значит все-тки ссылка? Немного запуталась-->
+        </form>
+      </section>
+
+      <section class="sorting">
+        <form class="sorting-type"> <!--Значения сортировки value взяла из Лайва по разметке, тк в макете не нашла инфы какие еще будут варианты, кроме одного указанного-->
+          <label class="sorting-title" for="sorting">Сортировка</label>
+          <select class="select-control" id="sorting" name="sorting">
+          <a class="sorting-link" href="#">
+            <option value="popular">Сначала популярные</option>
+            <option value="cheap">Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </a>
+          </select>
+        </form>
+
+        <a class="sort-link" href="#">
+          <span class="visually-hidden">Сортировать по возрастанию</span>
+        </a>
+        <a class="sort-link sort-link-current" href="#">
+          <span class="visually-hidden">Сортировать по убыванию</span>
+        </a>
+      </section>
+
+      <section class="products">
+        <h2 class="visually-hidden">Каталог с карточками товаров</h2>
+        <ul class="product-list">
+          <li class="product-item">
+            <a class="product-card-link" href="product.html">
+              <img class="product-card-image" src="" alt="Селфи-палка">
+              <h3 class="product-card-title">Любительская селфи-палка</h3>
+            </a>
+            <a class="more" href="#">Подробнее</a>
+            <b class="product-card-price">500 ₽</b>
+          </li>
+          <li class="product-item">
+            <a class="product-card-link" href="product.html">
+              <img class="product-card-image" src="" alt="Селфи-палка для профессионалов">
+              <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+            </a>
+            <a class="more" href="#">Подробнее</a>
+            <b class="product-card-price">1 500 ₽</b>
+          </li>
+          <li class="product-item">
+            <a class="product-card-link" href="product.html">
+              <img class="product-card-image" src="" alt="Селфи-палка, которая не тонет">
+              <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+            </a>
+            <a class="more" href="#">Подробнее</a>
+            <b class="product-card-price">2 500 ₽</b>
+          </li>
+        <li class="product-item">
+          <a class="product-card-link" href="product.html">
+            <img class="product-card-image" src="" alt="Селфи-палка в виде руки">
+            <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+          </a>
+          <a class="more" href="#">Подробнее</a>
+          <b class="product-card-price">4 900 ₽</b>
+        </li>
+        </ul>
+
+        <button class="show-more" type="submit">Загрузить еще</button>
+      </section>
+
+      <section class="pagination">
+        <h3 class="visually-hidden">Пагинация</h3>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-prev">Назад</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">...</a> <!--Тут не уверена, возможно эта штука как-то по-другом размечается?-->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">15</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer> <!--Без класса, потому что везде одинаковый-->
+      <img class="logo-footer" src="" alt="Логотип компании Девайс">
+
+      <section class="address">
+        <h2 class="visually-hidden">Адрес</h2>
+        <address class="address-footer">
+          <p class="address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+        </address>
+      </section>
+
+      <nav class="navigation-footer">
+        <ul class="navigation-footer-list">
+          <li class="navigation-footer-item">
+            <a class="navigation-footer-link" href="delivery.html">Доставка</a>
+          </li>
+          <li class="navigation-footer-item">
+            <a class="navigation-footer-link" href="guarantee.html">Гарантия</a>
+          </li>
+          <li class="navigation-footer-item">
+            <a class="navigation-footer-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="social-list">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://www.instagram.com/htmlacademy/">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="phone-number">
+        <h2 class="visually-hidden">Номер телефона</h2>
+        <a class="phone-number-link" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a> <!--На макете вроде не ссылка (ориентируюсь на нижнее подчеркивание номера, в блоке контактов оно есть, а в футере нет), но так ведь будет удобнее. Так же можно делать или все строго как на макете?-->
+      </section>
+
+      <p class="logo-htmlacademy">
+        <img class="logo-htmlacademy-footer" src="https://htmlacademy.ru/" alt="Логотип компании HTML Academy">
+      </p>
+    </footer>
+
+    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+  </body>
+</html>
