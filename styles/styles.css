@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Raleway", "sans-serif";
-  font-style: ;
+  font-style: normal;
   font-weight: 800;
-  src: url(/fonts/raleway/raleway-800.woff2) format (woff2);
+  src: url(fonts/raleway/raleway-800.woff2) format (woff2);
   font-display: swap;
 }
 
@@ -10,22 +10,122 @@
   font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/rubik/rubik-400.woff2) format (woff2);
+  src: url(fonts/rubik/rubik-400.woff2) format (woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: "Rubik", "sans-serif";
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
-  src: url(/fonts/rubik/rubik-700.woff2) format (woff2);
+  src: url(fonts/rubik/rubik-700.woff2) format (woff2);
   font-display: swap
 }
 
 @font-face {
   font-family: "Rubik", "sans-serif";
-  font-style: ;
+  font-style: normal;
   font-weight: 800;
-  src: url(/fonts/rubik/rubik-800.woff2) format (woff2);
+  src: url(fonts/rubik/rubik-800.woff2) format (woff2);
   font-display: swap
+}
+
+body {
+  font-family: "Rubik", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background: #FFFFFF;
+}
+
+header {
+  background: #FFE17F;
+}
+
+.searching {
+  font-family: "Rubik", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px
+}
+
+.search-string {
+  opacity: 0.3;
+}
+
+.catalog-header-link {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em; /*На лайве говорили, что берем пока только относительные величины,желательно в пикселях. На Макете есть относительная характеристика. Ее лучше убрать совсем, оставить как есть или как-то преобразовать? */
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-user.navigation-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-button { /*Кнопка "Корзина". Попыталась сделать так, чтобы она выглядела просто как слово, не уверена насчет правильности */
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.navigation-list.navigation-link {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em; /*На лайве говорили, что берем пока только относительные величины,желательно в пикселях. На Макете есть относительная характеристика. Ее лучше убрать совсем, оставить как есть или как-то преобразовать? */
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.slider-main-number {
+  font-weight: 800;
+  font-size: 180px;
+  line-height: 30px;
+  color: #FFFFFF; /*на сайте белый фон, в хедере желтый. По макету белые цифры заползают на желтый фон, но как это настроить не знаю.. Пока они в разметке лежат в main и цвет фона и текста сливается. Можно нстроить это через css или перенести 01 в шапку?*/
+}
+
+.slider-main-title {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.more {
+  font-family: Raleway;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0.2em;
+letter-spacing: 0.2em; /*На лайве говорили, что берем пока только относительные величины,желательно в пикселях. На Макете есть относительная характеристика. Ее лучше убрать совсем, оставить как есть или как-то преобразовать? */
+text-transform: uppercase;
+}
+
+
+
+footer {
+  background: #444444;
 }
