@@ -1,9 +1,31 @@
 @font-face {
   font-family: "Raleway", "sans-serif";
-/*доделать во второй задачке*/
+  font-style: ;
+  font-weight: 800;
+  src: url(/fonts/raleway/raleway-800.woff2) format (woff2);
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Rubik", "sans-serif";
-/*доделать во второй задачке*/
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/rubik/rubik-400.woff2) format (woff2);
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Rubik", "sans-serif";
+  font-style: bold;
+  font-weight: 700;
+  src: url(/fonts/rubik/rubik-700.woff2) format (woff2);
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Rubik", "sans-serif";
+  font-style: ;
+  font-weight: 800;
+  src: url(/fonts/rubik/rubik-800.woff2) format (woff2);
+  font-display: swap
 }
