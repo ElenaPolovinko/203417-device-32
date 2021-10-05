@@ -30,7 +30,8 @@
   font-display: swap
 }
 
-body {
+body { /*при добавлении основного шрифта через body подсвечиваются все скрытые классы с пометкой visually-hidden.
+  Можно этого избежать? или тут только 1 способ - назначать шрифт не через body, а в каждом классе отдельно?*/
   font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: normal;
@@ -62,17 +63,24 @@ header {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: 0.2em; /*На лайве говорили, что берем пока только относительные величины,желательно в пикселях. На Макете есть относительная характеристика. Ее лучше убрать совсем, оставить как есть или как-то преобразовать? */
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
 }
 
-.navigation-user.navigation-link {
+.navigation-user .navigation-link {
   font-size: 16px;
   line-height: 19px;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-user .navigation-link-exit {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+  opacity: 0.3;
 }
 
 .navigation-button { /*Кнопка "Корзина". Попыталась сделать так, чтобы она выглядела просто как слово, не уверена насчет правильности */
@@ -85,13 +93,12 @@ header {
   outline: none;
 }
 
-.navigation-list.navigation-link {
+.navigation-list .navigation-link {
   font-family: "Raleway", "sans-serif";
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: 0.2em; /*На лайве говорили, что берем пока только относительные величины,желательно в пикселях. На Макете есть относительная характеристика. Ее лучше убрать совсем, оставить как есть или как-то преобразовать? */
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
@@ -101,7 +108,10 @@ header {
   font-weight: 800;
   font-size: 180px;
   line-height: 30px;
-  color: #FFFFFF; /*на сайте белый фон, в хедере желтый. По макету белые цифры заползают на желтый фон, но как это настроить не знаю.. Пока они в разметке лежат в main и цвет фона и текста сливается. Можно нстроить это через css или перенести 01 в шапку?*/
+  color: #FFFFFF; /*на сайте белый фон, в хедере желтый. По макету белые цифры заползают на желтый фон, но как это настроить не знаю..
+  Пока они в разметке лежат в main и цвет фона и текста сливается. Можно нстроить это через css или перенести 01 в шапку?*/
+  align-items: center;
+  text-align: right;
 }
 
 .slider-main-title {
@@ -114,18 +124,331 @@ header {
 }
 
 .more {
-  font-family: Raleway;
-font-style: normal;
-font-weight: 800;
-font-size: 18px;
-line-height: 21px;
-letter-spacing: 0.2em;
-letter-spacing: 0.2em; /*На лайве говорили, что берем пока только относительные величины,желательно в пикселях. На Макете есть относительная характеристика. Ее лучше убрать совсем, оставить как есть или как-то преобразовать? */
-text-transform: uppercase;
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  color: #000000;
+  text-align: center;
+}
+
+.details-term {
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.details-description {
+  font-size: 16px;
+}
+
+.product-categories {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.purchase-terms {
+  background: #F0F0F0;
+}
+
+/*ниже стилизую 2 зачеркнутых слова - Гарантия и Кредит. Можно зачеркнуть желтой линией через css?*/
+.crossed-out {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  color: #000000;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.crossed-out-term-current {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #FFE17F;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: #000000;
+  text-align: center;
+}
+
+.purchase-terms-title {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.advantage {
+  background: #F0F0F0;
+}
+
+.advantage-text {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.about-title .contacts-title {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.delivery-services-item {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.contacts-subtitle {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.contacts-address {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.contacts-subtitle {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.contacts-phone {
+  text-decoration-line: underline;
+  color: #444444;
+}
+
+.subscription {
+  background: #F0F0F0;
+}
+
+.subscription-title {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.email-form {
+  opacity: 0.5;
+}
+
+.subscribe {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.inner-header {
+  background: #FFFFFF;
+}
+
+.inner-header-title{
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.filters-list {
+  background: #EBEBEB;
+}
+
+.filters {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #000000;
+  background: #DCDCDC;
+}
+
+.catalog-filter-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.catalog-filter-label {
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.color-label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.sorting {
+  background: #EBEBEB;
+}
+
+.sorting-title {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-card-link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #444444;
 }
 
 
+.show-more {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  background: #FFFFFF;
+  border: none;
+  outline: none;
+}
+
+.pagination {
+  background: #EBEBEB;
+}
+
+.pagination-prev {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.pagination-next {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+  color: #000000;
+}
 
 footer {
   background: #444444;
 }
+
+.address-text {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.navigation-footer-link {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.phone-number-link {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: right;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* В рамках лайва Коля говорил, что берем только абсолютные величины, если проценты указаны и пиксели, то берем значение в пикселях.
+У меня есть для некоторых текстов параметр с относительным значением - letter-spacing: 0.2em; - в макете не указано сколько это в пикселях.
+Эту инфу брать в проект сейчас в исходном виде или пока только абсолют, а уже в дальнейшем добавлю относительные при шлифовке проекта?*/

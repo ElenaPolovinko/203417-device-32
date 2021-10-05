@@ -37,7 +37,7 @@
           </li>
         </ul>
 
-        <button class="navigation-button" type="button">Корзина</button>
+        <button class="navigation-button" type="button" aria-label="корзина">Корзина</button>
 
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -71,26 +71,26 @@
       </ul>
       </header>
 
-      <section class="filters-list"></section>
+      <section class="filters-list">
         <h2 class="filters">фильтр:</h2>
 
        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
 
-            <button class="range-toggle toggle-min" type="button">
+            <button class="range-toggle toggle-min" type="button" aria-label="ввод минимальной цены">
               <span class="visually-hidden">Изменить минимальную цену</span>
             </button>
-            <button class="range-toggle toggle-max" type="button">
+            <button class="range-toggle toggle-max" type="button" aria-label="ввод максимальной цены">
               <span class="visually-hidden">Изменить максимальную цену</span>
             </button>
 
             <label class="catalog-filter-label">
-              от <input class="catalog-filter-input" type="number" name="min-price">
+              от 0<input class="catalog-filter-input" type="number" name="min-price">
             </label>
 
             <label class="catalog-filter-label">
-              до <input class="catalog-filter-input" type="number" name="max-price">
+              до 5000<input class="catalog-filter-input" type="number" name="max-price">
             </label>
           </fieldset>
 
@@ -162,7 +162,7 @@
             </ul>
           </fieldset>
 
-          <button class="crossed-out" type="submit">Показать</button>
+          <button class="crossed-out" type="submit" aria-label="показать результаты фильтрации">Показать</button>
         </form>
       </section>
 
@@ -223,14 +223,14 @@
         </li>
         </ul>
 
-        <button class="show-more" type="submit">Загрузить еще</button>
+        <button class="show-more" type="submit" aria-label="загрузить ещё несколько товаров">Загрузить еще</button>
       </section>
 
       <section class="pagination">
         <h3 class="visually-hidden">Пагинация</h3>
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev">Назад</a>
+            <a class="pagination-link pagination-prev">назад</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link">1</a>
@@ -246,6 +246,9 @@
           </li>
           <li class="pagination-item">
             <a class="pagination-link">15</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-next">вперёд</a>
           </li>
         </ul>
       </section>
