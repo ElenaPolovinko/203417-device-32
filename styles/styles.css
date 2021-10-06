@@ -1,37 +1,36 @@
 @font-face {
-  font-family: "Raleway", "sans-serif";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
-  src: url(fonts/raleway/raleway-800.woff2) format (woff2);
+  src: url("../fonts/raleway-800.woff2") format (woff2);
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik", "sans-serif";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/rubik/rubik-400.woff2) format (woff2);
+  src: url("../fonts/rubik-400.woff2") format (woff2);
   font-display: swap
 }
 
 @font-face {
-  font-family: "Rubik", "sans-serif";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
-  src: url(fonts/rubik/rubik-700.woff2) format (woff2);
+  src: url("../fonts/rubik-700.woff2") format (woff2);
   font-display: swap
 }
 
 @font-face {
-  font-family: "Rubik", "sans-serif";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 800;
-  src: url(fonts/rubik/rubik-800.woff2) format (woff2);
+  src: url("../fonts/rubik-800.woff2") format (woff2);
   font-display: swap
 }
 
-body { /*при добавлении основного шрифта через body подсвечиваются все скрытые классы с пометкой visually-hidden.
-  Можно этого избежать? или тут только 1 способ - назначать шрифт не через body, а в каждом классе отдельно?*/
+body {
   font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: normal;
@@ -54,7 +53,13 @@ header {
 }
 
 .search-string {
+  font-family: "Rubik", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
   opacity: 0.3;
+  color: #000000;
 }
 
 .catalog-header-link {
@@ -83,7 +88,10 @@ header {
   opacity: 0.3;
 }
 
-.navigation-button { /*Кнопка "Корзина". Попыталась сделать так, чтобы она выглядела просто как слово, не уверена насчет правильности */
+.navigation-button {
+  font-family: "Rubik", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
@@ -108,8 +116,7 @@ header {
   font-weight: 800;
   font-size: 180px;
   line-height: 30px;
-  color: #FFFFFF; /*на сайте белый фон, в хедере желтый. По макету белые цифры заползают на желтый фон, но как это настроить не знаю..
-  Пока они в разметке лежат в main и цвет фона и текста сливается. Можно нстроить это через css или перенести 01 в шапку?*/
+  color: #FFFFFF;
   align-items: center;
   text-align: right;
 }
@@ -159,7 +166,6 @@ header {
   background: #F0F0F0;
 }
 
-/*ниже стилизую 2 зачеркнутых слова - Гарантия и Кредит. Можно зачеркнуть желтой линией через css?*/
 .crossed-out {
   font-family: "Raleway", "sans-serif";
   font-style: normal;
@@ -214,7 +220,16 @@ header {
   text-align: center;
 }
 
-.about-title .contacts-title {
+.about-title  {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.contacts-title {
   font-family: "Raleway", "sans-serif";
   font-style: normal;
   font-weight: 800;
@@ -242,12 +257,6 @@ header {
   text-decoration: none;
 }
 
-.contacts-subtitle {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-}
-
 .contacts-phone {
   text-decoration-line: underline;
   color: #444444;
@@ -267,6 +276,12 @@ header {
 }
 
 .email-form {
+  font-family: "Rubik", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
   opacity: 0.5;
 }
 
@@ -351,11 +366,17 @@ header {
   color: #000000;
 }
 
-.sorting-link {
+.select-control {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
   text-decoration: none;
+  border: none;
+  outline: none;
+  background: #EBEBEB;
 }
 
 .product-card-link {
@@ -372,7 +393,6 @@ header {
   text-align: right;
   color: #444444;
 }
-
 
 .show-more {
   font-family: "Raleway", "sans-serif";
@@ -449,6 +469,3 @@ footer {
   text-decoration: none;
 }
 
-/* В рамках лайва Коля говорил, что берем только абсолютные величины, если проценты указаны и пиксели, то берем значение в пикселях.
-У меня есть для некоторых текстов параметр с относительным значением - letter-spacing: 0.2em; - в макете не указано сколько это в пикселях.
-Эту инфу брать в проект сейчас в исходном виде или пока только абсолют, а уже в дальнейшем добавлю относительные при шлифовке проекта?*/
