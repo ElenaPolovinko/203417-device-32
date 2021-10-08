@@ -1,33 +1,33 @@
 @font-face {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "sans-serif";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/raleway-800.woff2") format (woff2);
+  src: url("../fonts/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/rubik-400.woff2") format (woff2);
-  font-display: swap
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/rubik-700.woff2") format (woff2);
-  font-display: swap
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/rubik-800.woff2") format (woff2);
-  font-display: swap
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
 }
 
 body {
@@ -60,6 +60,9 @@ header {
   line-height: 19px;
   opacity: 0.3;
   color: #000000;
+  border: none;
+  outline: none;
+  background-color: inherit;
 }
 
 .catalog-header-link {
@@ -112,12 +115,11 @@ header {
   text-decoration: none;
 }
 
-.slider-main-number {
+.promo-number {
   font-weight: 800;
   font-size: 180px;
   line-height: 30px;
   color: #FFFFFF;
-  align-items: center;
   text-align: right;
 }
 
@@ -130,6 +132,20 @@ header {
   color: #000000;
 }
 
+.crossed {
+  position: relative;
+}
+
+.crossed::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #FFE17F;
+}
+
 .more {
   font-family: "Raleway", "sans-serif";
   font-style: normal;
@@ -137,9 +153,9 @@ header {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
-  text-decoration: line-through;
   color: #000000;
   text-align: center;
+  text-decoration: none;
 }
 
 .details-term {
@@ -173,12 +189,22 @@ header {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
-  text-decoration: line-through;
   color: #000000;
   background-color: inherit;
   border: none;
   outline: none;
   text-align: center;
+  position: relative;
+}
+
+.crossed-out::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #FFE17F;
 }
 
 .crossed-out-term-current {
@@ -283,6 +309,9 @@ header {
   line-height: 30px;
   color: #444444;
   opacity: 0.5;
+  background-color: inherit;
+  border: none;
+  outline: none;
 }
 
 .subscribe {
@@ -400,7 +429,6 @@ header {
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -419,7 +447,6 @@ header {
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
-  align-items: center;
   text-transform: uppercase;
   color: #000000;
 }
@@ -430,7 +457,6 @@ header {
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
-  align-items: center;
   text-align: right;
   text-transform: uppercase;
   color: #000000;
@@ -468,4 +494,8 @@ footer {
   color: #FFFFFF;
   text-decoration: none;
 }
+
+
+
+
 
