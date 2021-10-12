@@ -9,19 +9,16 @@
 
   <body>
     <header class="header-main-page">
-      <img class="logo-header" src="images/logo/logo-header.svg" width="145" height="36" alt="Логотип компании Девайс">
-
       <nav class="navigation-header">
+        <img class="logo-header" src="images/logo/logo-header.svg" width="145" height="36" alt="Логотип компании Девайс">
+
+        <div class="navigation-container-1">
 
         <p class="searching">
           <form class="search" action="https://echo.htmlacademy.ru/" method="post">
           <input class="search-string" type="text" name="search-text" placeholder="Поиск по сайту">
           <button class="search-button" type="submit">Найти</button>
         </form>
-        </p>
-
-        <p class="catalog-header">
-          <a class="catalog-header-link" href="#">Каталог товаров</a>
         </p>
 
         <ul class="navigation-user">
@@ -34,6 +31,12 @@
         </ul>
 
         <button class="navigation-button" type="button" aria-label="корзина">Корзина</button>
+        </div>
+
+        <div class="navigation-container-2">
+        <p class="catalog-header">
+          <a class="catalog-header-link" href="#">Каталог товаров</a>
+        </p>
 
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -48,22 +51,27 @@
           </ul>
       </nav>
       <p class="promo-number">01</p>
+    </div>
     </header>
 
-    <main class="index">
+    <main class="main-container index">
+      <div class="page-container">
        <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
 
        <section class="slider-main">
-         <h2 class="visually-hidden">Промо-слайдер товаров на главной</h2>
+         <!--<h2 class="visually-hidden">Промо-слайдер товаров на главной</h2>Временно закомментировано, мешает-->
 
-         <img class="slider-main-item" src="images/slider/slider-image-1.png" width="560" height="560" alt="Квадрокоптер">
          <button class="slider-button slider-prev" type="button">
-           <span class="visually-hidden">Предыдущее фото</span>
-         </button>
-         <button class="slider-button slider-next" type="button">
-           <span class="visually-hidden">Следующее фото</span>
+          <!--<span class="visually-hidden">Предыдущее фото</span>Временно закомментировано, мешает-->
         </button>
 
+         <img class="slider-main-item" src="images/slider/slider-image-1.png" width="560" height="560" alt="Квадрокоптер">
+
+         <button class="slider-button slider-next" type="button">
+           <!--<span class="visually-hidden">Следующее фото</span>Временно закомментировано, мешает-->
+        </button>
+
+        <div class="slider-description">
         <p class="slider-main-title">Порхает как бабочка, жалит как пчела!</p>
         <p class="slider-main-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 
@@ -86,9 +94,8 @@
             </button>
           </li>
           </ol>
-        </section>
-
-          <div class="details">
+        </div>
+        <div class="details">
           <dl class="details-list">
             <dt class="details-term">800 м</dt>
             <dd class="details-description">Дальность полета</dd>
@@ -96,44 +103,70 @@
             <dd class="details-description">Радиус поражения</dd>
           </dl>
         </div>
+        </section>
+
 
        <section class="product-categories">
-         <h2 class="visually-hidden">Категории товаров</h2>
+         <!--<h2 class="visually-hidden">Категории товаров</h2> Временно скрыто, мешает отображению-->
 
-         <a class="product-categories link" href="#">
+       <div class="product-categories-container"
+        <a class="product-categories-link" href="#">
+          <figure>
           <img class="product-categories-img" src="images/popular-index/popular-1.svg" width="97" height="55" alt="Компания Девайс - Аксессуары для виртуальной реальности">
-          <h3 class="product-categories-title">Виртуальная реальность</h3>
+          <figcaption class="product-categories-title">Виртуальная реальность</figcaption>
+        </figure>
         </a>
-         <a class="product-categories link" href="#">
+
+        <a class="product-categories-link" href="#">
+          <figure>
            <img class="product-categories-img" src="images/popular-index/popular-2.svg" width="86" height="117" alt="Компания Девайс - Моноподы для селфи">
-           <h3 class="product-categories-title">Моноподы для селфи</h3>
-         </a>
-         <a class="product-categories link" href="#">
+           <figcaption class="product-categories-title">Моноподы для селфи</figcaption>
+          </figure>
+        </a>
+
+        <a class="product-categories-link" href="#">
+          <figure>
           <img class="product-categories-img" src="images/popular-index/popular-3.svg" width="71" height="87" alt="Компания Девайс - Экшн-камеры">
-          <h3 class="product-categories-title">Экшн-камеры</h3>
+          <figcaption class="product-categories-title">Экшн-камеры</figcaption>
+        </figure>
         </a>
-        <a class="product-categories link" href="#">
+
+        <a class="product-categories-link" href="#">
+          <figure>
           <img class="product-categories-img" src="images/popular-index/popular-4.svg" width="108" height="65" alt="Компания Девайс - Фитнес-браслеты">
-          <h3 class="product-categories-title">Фитнес-браслеты</h3>
+          <figcaption class="product-categories-title">Фитнес-браслеты</figcaption>
+        </figure>
         </a>
-        <a class="product-categories link" href="#">
+
+        <a class="product-categories-link" href="#">
+          <figure>
           <img class="product-categories-img" src="images/popular-index/popular-5.svg" width="56" height="98" alt="Компания Девайс - Умные часы">
-          <h3 class="product-categories-title">Умные часы</h3>
+          <figcaption class="product-categories-title">Умные часы</figcaption>
+        </figure>
         </a>
-        <a class="product-categories link" href="#">
+
+        <a class="product-categories-link" href="#">
+          <figure>
           <img class="product-categories-img" src="images/popular-index/popular-6.svg" width="132" height="69" alt="Компания Девайс - Квадрокоптеры">
-          <h3 class="product-categories-title">Квадрокоптеры</h3>
+          <figcaption3 class="product-categories-title">Квадрокоптеры</figcaption3>
+        </figure>
         </a>
+      </div>
        </section>
 
        <section class="purchase-terms">
-         <h2 class="visually-hidden">Условия покупки</h2>
-          <button class="crossed-out-term-current" type="button" aria-label="доставка">Доставка</button>
-          <button class="crossed-out" type="button" aria-label="гарантия">Гарантия</button>
-          <button class="crossed-out" type="button" aria-label="кредит">Кредит</button>
-
+         <!--<h2 class="visually-hidden">Условия покупки</h2>Временно закомментировано-->
+         <div class="purchase-list">
+           <ul>
+          <li><button class="crossed-out-term-current" type="button" aria-label="доставка">Доставка</button></li>
+          <li><button class="crossed-out" type="button" aria-label="гарантия">Гарантия</button></li>
+          <li><button class="crossed-out" type="button" aria-label="кредит">Кредит</button></li>
+          </ul>
+        </div>
+        <div class="purchase-description">
           <h3 class="purchase-terms-title">Доставка</h3>
           <p class="purchase-terms-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
       </section>
 
       <section class="advantage">
@@ -142,6 +175,7 @@
       </section>
 
       <section class="about">
+        <div class="about-box">
         <h2 class="about-title">О нас</h2>
         <p class="about-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p class="about-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
@@ -153,9 +187,9 @@
         </ul>
 
         <a class="more" href="#"><span class="crossed">Подробнее о нас<span></a>
-      </section>
+        </div>
 
-      <section class="contacts">
+        <div class="contacts-box">
         <h2 class="contacts-title">Контакты</h2>
         <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки. </p>
 
@@ -172,6 +206,7 @@
         </ul>
 
         <button class="crossed-out" type="button" aria-label="напишите нам">Напишите нам</button>
+      </div>
       </section>
 
       <section class="subscription">
@@ -185,12 +220,13 @@
 
         <p class="free">Это бесплатно</p>
       </section>
+    </div>
     </main>
 
     <footer>
-      <img class="logo-footer" src="images/logo/logo-footer.svg" width="145" height="36" alt="Логотип компании Девайс">
-
+      <div class="page-footer-container">
       <section class="address">
+        <img class="logo-footer" src="images/logo/logo-footer.svg" width="145" height="36" alt="Логотип компании Девайс">
         <h2 class="visually-hidden">Адрес</h2>
         <address class="address-footer">
           <p class="address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
@@ -209,9 +245,7 @@
             <a class="navigation-footer-link" href="contacts.html">Контакты</a>
           </li>
         </ul>
-      </nav>
 
-      <section class="social-list">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -230,18 +264,19 @@
             </a>
           </li>
         </ul>
-      </section>
+      </nav>
 
       <section class="phone-number">
         <h2 class="visually-hidden">Номер телефона</h2>
         <a class="phone-number-link" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-      </section>
 
       <p class="logo-htmlacademy">
         <a class="logo-htmlacademy-link" href="https://htmlacademy.ru/">
         <img class="logo-htmlacademy-footer" src="images/logo/logo-htmlacademy.svg" width="115" height="34" alt="Логотип компании HTML Academy">
         </a>
       </p>
+    </section>
+    </div>
     </footer>
 
     <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
