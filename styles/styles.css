@@ -498,6 +498,8 @@ body {
   text-transform: uppercase;
   color: #000000;
   background: #DCDCDC;
+  width: 468px;
+  margin-right: 72px;
 }
 
 .catalog-filter-title {
@@ -518,6 +520,11 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+}
+
+.catalog-right-column{
+  width: 760px;
+  margin-right: 140px;
 }
 
 .sorting {
