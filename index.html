@@ -54,9 +54,9 @@
       <p class="promo-number">01</p>
     </header>
 
-    <main class="main-container index">
+    <main class="main-container-index">
       <div class="page-container">
-       <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
+       <!--<h1 class="visually-hidden">Интернет-магазин Девайс</h1>Временно закомментировано, мешает-->
 
        <section class="slider-main">
         <div class="slider-img">
@@ -119,42 +119,42 @@
        <div class="product-categories-container">
         <a class="product-categories-link" href="#">
           <figure>
-          <img class="product-categories-img" src="images/popular-index/popular-1.svg" width="97" height="55" alt="Компания Девайс - Аксессуары для виртуальной реальности">
+          <div class="product-img-background"><img class="product-categories-img" src="images/popular-index/popular-1.svg" width="97" height="55" alt="Компания Девайс - Аксессуары для виртуальной реальности"></div>
           <figcaption class="product-categories-title">Виртуальная реальность</figcaption>
         </figure>
         </a>
 
         <a class="product-categories-link" href="#">
           <figure>
-           <img class="product-categories-img" src="images/popular-index/popular-2.svg" width="86" height="117" alt="Компания Девайс - Моноподы для селфи">
+            <div class="product-img-background"><img class="product-categories-img" src="images/popular-index/popular-2.svg" width="86" height="117" alt="Компания Девайс - Моноподы для селфи"></div>
            <figcaption class="product-categories-title">Моноподы для селфи</figcaption>
           </figure>
         </a>
 
         <a class="product-categories-link" href="#">
           <figure>
-          <img class="product-categories-img" src="images/popular-index/popular-3.svg" width="71" height="87" alt="Компания Девайс - Экшн-камеры">
+            <div class="product-img-background"><img class="product-categories-img" src="images/popular-index/popular-3.svg" width="71" height="87" alt="Компания Девайс - Экшн-камеры"></div>
           <figcaption class="product-categories-title">Экшн-камеры</figcaption>
         </figure>
         </a>
 
         <a class="product-categories-link" href="#">
           <figure>
-          <img class="product-categories-img" src="images/popular-index/popular-4.svg" width="108" height="65" alt="Компания Девайс - Фитнес-браслеты">
+            <div class="product-img-background"><img class="product-categories-img" src="images/popular-index/popular-4.svg" width="108" height="65" alt="Компания Девайс - Фитнес-браслеты"></div>
           <figcaption class="product-categories-title">Фитнес-браслеты</figcaption>
         </figure>
         </a>
 
         <a class="product-categories-link" href="#">
           <figure>
-          <img class="product-categories-img" src="images/popular-index/popular-5.svg" width="56" height="98" alt="Компания Девайс - Умные часы">
+            <div class="product-img-background"><img class="product-categories-img" src="images/popular-index/popular-5.svg" width="56" height="98" alt="Компания Девайс - Умные часы"></div>
           <figcaption class="product-categories-title">Умные часы</figcaption>
         </figure>
         </a>
 
         <a class="product-categories-link" href="#">
           <figure>
-          <img class="product-categories-img" src="images/popular-index/popular-6.svg" width="132" height="69" alt="Компания Девайс - Квадрокоптеры">
+            <div class="product-img-background"><img class="product-categories-img" src="images/popular-index/popular-6.svg" width="132" height="69" alt="Компания Девайс - Квадрокоптеры"></div>
           <figcaption3 class="product-categories-title">Квадрокоптеры</figcaption3>
         </figure>
         </a>
@@ -163,6 +163,7 @@
 
        <section class="purchase-terms">
          <!--<h2 class="visually-hidden">Условия покупки</h2>Временно закомментировано-->
+         <div class="purchase-container">
          <div class="purchase-list">
            <ul>
           <li><button class="crossed-out-term-current" type="button" aria-label="доставка">Доставка</button></li>
@@ -173,6 +174,7 @@
         <div class="purchase-description">
           <h3 class="purchase-terms-title">Доставка</h3>
           <p class="purchase-terms-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
         </div>
       </section>
 
@@ -217,15 +219,22 @@
       </section>
 
       <section class="subscription">
+        <div class="subscription-container">
+
+          <div class="subscription-box1">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          </div>
 
+          <div class="subscription-box2">
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="email-form" type="email" name="email-address" placeholder="Ваш e-mail">
-          <button class="subscribe" type="submit" aria-label="подписаться">Подписаться</button>
+          <a class="subscribe" href="#"">Подписаться</a>
         </form>
-
         <p class="free">Это бесплатно</p>
+          </div>
+
+        </div>
       </section>
     </div>
     </main>
@@ -285,7 +294,5 @@
     </section>
     </div>
     </footer>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
   </body>
 </html>

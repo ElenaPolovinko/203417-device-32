@@ -57,29 +57,27 @@
       </nav>
     </header>
 
-    <main>
-      <div class="page-container">
-      <header class="inner-header">
-      <h1 class="inner-header-title">Моноподы для селфи </h1>
+    <main class="main-container-catalog">
 
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs-item">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Моноподы для селфи </h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html/">Главная</a>
-
-        </li>
-        <li class="breadcrumbs-item">
+            </li>
+            <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="breadcrumbs-item">
+            </li>
+            <li class="breadcrumbs-item">
           <a class="breadcrumbs-link">Моноподы для селфи</a>
-        </li>
-      </ul>
+            </li>
+          </ul>
       </header>
 
-      <h2 class="filters">фильтр:</h2>
-
       <section class="catalog-products">
-
+        <div class="catalog-products-container">
+        <div class="catalog-left-column">
+          <h2 class="filters">фильтр:</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
@@ -171,6 +169,7 @@
 
           <button class="crossed-out" type="submit" aria-label="показать результаты фильтрации">Показать</button>
         </form>
+        </div>
 
       <div class="catalog-right-column">
       <div class="sorting">
@@ -193,7 +192,7 @@
         </a>
       </div>
 
-        <h2 class="visually-hidden">Каталог с карточками товаров</h2>
+        <!--<h2 class="visually-hidden">Каталог с карточками товаров</h2>Временно закомментировано-->
         <ul class="product-list">
           <li class="product-item">
             <a class="product-card-link" href="product.html">
@@ -253,8 +252,8 @@
           </li>
         </ul>
       </div>
+        </div>
       </section>
-    </div>
     </main>
 
     <footer>
@@ -313,7 +312,5 @@
       </section>
     </div>
     </footer>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
   </body>
 </html>
