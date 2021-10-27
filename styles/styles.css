@@ -97,12 +97,11 @@ body {
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between;;
   margin: 0;
   padding: 0;
-  margin-left: auto;
   list-style-type: none;
-  width: 405px;
+  width: 535px;
 }
 
 .navigation-container-2 {
@@ -115,14 +114,16 @@ body {
 }
 
 .search {
+  display: flex;
   font-family: "Rubik", "sans-serif";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   padding: 1px;
-  width: 516px;
+  width: 177px;
   height: 20px;
+  margin-right: auto;
 }
 
 .navigation-list {
@@ -168,15 +169,21 @@ body {
   padding-bottom: 15px;
 }
 
+.navigation-user-item {
+  max-height: 20px;
+}
+
 .navigation-user-link {
   display: block;
-  padding: 1px;
+  padding: 5px;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
   text-decoration: none;
-  min-width: 60px;
-  max-height: 20px;
+}
+
+.entrance {
+  margin-right: auto;
 }
 
 .navigation-user-link-exit {
@@ -188,22 +195,15 @@ body {
 }
 
 .navigation-button {
-  font-family: "Rubik", "sans-serif";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-  text-decoration: none;
-  background: none;
-  border: none;
-  outline: none;
-  margin-left: auto;
-  align-self: start;
+  width: 21px;
+  height: 21px;
+  margin-right: 20px;
+  margin-left: 14px;
 }
 
 .navigation-link {
   display: block;
+  padding-top: 15px;
   padding: 15px;
   font-family: "Raleway", "sans-serif";
   font-style: normal;
@@ -213,8 +213,6 @@ body {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
-  min-width: 140px;
-  max-height: 20px;
 }
 
 .promo-number {
@@ -336,6 +334,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .details-list {
@@ -521,6 +520,8 @@ figure {
   color: #000000;
   text-decoration: none;
   padding-top: 37px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .about-title  {
