@@ -32,6 +32,7 @@
 
 html {
   height: 100%;
+  margin-top: 50px;
 }
 
 body {
@@ -62,6 +63,8 @@ body {
 .header-main-page {
   background: #FFE17F;
   margin: 0 auto;
+  width: 1160px;
+  height: 400px;
 }
 
 .header-catalog {
@@ -82,6 +85,7 @@ body {
   justify-content: flex-start;
   margin: 0 auto;
   width: 1160px;
+  margin-top: -25px;
 }
 
 .navigation-container-1 {
@@ -227,13 +231,13 @@ body {
   padding: 0;
   width: 1041px;
   height: 120px;
-  margin-bottom: 27px;
+  margin-bottom: 270px;
 }
 
 .catalog-header-full {
-  display: grid;
-  grid-template-columns: repeat(5, 200px);
-  gap: 20px 29px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;  
@@ -274,6 +278,7 @@ body {
     width: 1160px;
     margin: 0 auto;
     padding-bottom: 70px;
+    margin-top: -30px;
   }
 
   .promo-number {
@@ -285,7 +290,7 @@ body {
     color: #FFFFFF;
     text-align: right;
     grid-column: 9 / 11;
-    grid-rows: 1 / 3;
+    grid-row: 1 / 3;
   }
 
   .slider-button {
@@ -307,6 +312,7 @@ body {
     grid-column: 3 / 4;
     grid-row: 1 / -1;
     justify-self: center;
+    margin-top: -100px;
   }
 
   .slider-main-title {
@@ -354,7 +360,6 @@ body {
     height: 8px;
     background-color: #FFE17F;
     z-index: -1;
-
   }
 
   .slider-pagination{
@@ -452,6 +457,7 @@ figure {
   padding: 0;
   width: 1160px;
   height: 288px;
+  margin-top: -40px;
 }
 
 .purchase-list {
@@ -459,16 +465,23 @@ figure {
   grid-row: 1 / 4;
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .purchase-link {
   padding-bottom: 45px;
 }
 
+.purchase-link:first-child {
+  margin-top: 19px;
+}
+
 .purchase-link:last-child {
   padding-bottom: 0;
+}
+
+.purchase-link .crossed-out{
+  margin-right: 120px;
 }
 
 .crossed-out {
@@ -511,7 +524,7 @@ figure {
   outline: none;
   background: #000000;
   text-align: center;
-  padding: 10px 120px 10px 0;
+  padding: 10px 120px 10px 19px;
 }
 
 .purchase-terms-title {
@@ -525,6 +538,7 @@ figure {
   color: #000000;
   margin: 0;
   padding: 0;
+  margin-top: 10px;
 }
 
 .purchase-terms-text {
@@ -869,7 +883,8 @@ figure {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 1160px;
+  width: 1100px;
+  padding-left: 60px;
 }
 
 .inner-header-title{
@@ -903,10 +918,31 @@ figure {
   margin-right: 36px;
 }
 
+.catalog-products {
+  background: linear-gradient(to right, #EBEBEB 36%, #ffffff 36%, #ffffff 100%);
+}
+
 .catalog-products-container {
   display: flex;
   margin: 0 auto;
-  width: 1160px;
+  padding: 0;
+  width: 1100px;
+  padding-left: 60px;
+}
+
+.filters-sorting {
+  background: linear-gradient(to right, #DCDCDC, 36%, #EBEBEB 36%, #EBEBEB 100%);
+  margin-bottom: 69px;
+}
+
+.filters-sorting-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  width: 1100px;
+  height: 70px;
+  align-items: center;
+  padding-left: 60px;
 }
 
 .filters {
@@ -918,9 +954,9 @@ figure {
   text-transform: uppercase;
   color: #000000;
   text-align: center;
-  width: 236px;
-  height: 70px;
-  background: #DCDCDC;
+  margin: 0;
+  padding: 0;
+  margin-right: 164px;
 }
 
 h2 {
@@ -928,9 +964,9 @@ h2 {
   padding: 0;
 }
 
-fieldset {
-  border: 0;
-  border-bottom: 2px solid #000000;
+.catalog-filter {
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-title {
@@ -947,44 +983,48 @@ fieldset {
   opacity: 0.3;
 }
 
+.catalog-filter-input {
+  width: 50px;
+}
+
 .color-label {
   font-size: 16px;
   line-height: 19px;
   color: #000000;
 }
 
-.catalog-right-column{
-  flex-grow: 1;
+fieldset {
+  border: 0;
+  border-bottom: 2px solid #000000;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 41px;
 }
 
 .catalog-left-column{
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
-  width: 207px;
-  padding-right: 69px;
-  background: #EBEBEB;
+  margin-right: 40px;
 }
 
 .sorting {
   display: flex;
-  margin: 0;
-  padding: 0;
+  align-items: center;
   justify-content: space-between;
-  height: 70px;
-  width: 760px;
-  padding-left: 72px;
-  margin-bottom: 69px;
-  background: #EBEBEB;
 }
 
 .sorting-type {
   margin: 0;
   padding: 0px;
-  margin-right: auto;
+  margin-left: 72px;
 }
 
 .sorting-box {
   display: flex;
+  margin-left: 400px;
 }
 
 .sort-link {
@@ -1020,6 +1060,12 @@ fieldset {
   border: none;
   outline: none;
   background: #EBEBEB;
+  margin-left: 46px;
+  margin-right: auto;
+}
+
+.catalog-right-column {
+  margin-left: 72px;
 }
 
 .product-list {
@@ -1030,7 +1076,6 @@ fieldset {
   padding: 0;
   gap: 44px 40px;
   margin-bottom: 44px;
-  margin-left: 72px;
   background: #ffffff;
 }
 
@@ -1082,7 +1127,6 @@ fieldset {
   height: 55px;
   border: 3px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 51px;
-  margin-left: 72px;
 }
 
 .product-card-title {

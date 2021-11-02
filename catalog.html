@@ -9,10 +9,10 @@
 
   <body>
     <header class="header-catalog">
-      <a class="navigation-logo" href="index.html">
-        <img class="logo-header" src="images/logo/logo-header.svg" width="145" height="36"  alt="Логотип компании Девайс">
-       </a>
       <nav class="navigation-header">
+        <a class="navigation-logo" href="index.html">
+          <img class="logo-header" src="images/logo/logo-header.svg" width="145" height="36"  alt="Логотип компании Девайс">
+         </a>
 
       <div class="navigation-container-1">
         <p class="searching">
@@ -43,7 +43,7 @@
 
       <div class="navigation-container-2">
         <p class="catalog-header">
-          <a class="catalog-header-link" href="#">Каталог товаров</a>
+          <a class="catalog-header-title" href="#">Каталог товаров</a>
         </p>
 
           <ul class="navigation-list">
@@ -79,9 +79,36 @@
       </header>
 
       <section class="catalog-products">
+        <div class="filters-sorting">
+          <div class="filters-sorting-container">
+            <h2 class="filters">фильтр:</h2>
+
+          <div class="sorting">
+            <form class="sorting-type">
+              <label class="sorting-title" for="sorting">Сортировка</label>
+              <select class="select-control" id="sorting" name="sorting">
+              <a class="sorting-link" href="#">
+                <option value="popular">Сначала популярные</option>
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+              </a>
+              </select>
+            </form>
+    
+            <div class="sorting-box">
+            <a class="sort-link" href="#">
+              <span>^</span>
+            </a>
+            <a class="sort-link sort-link-current" href="#">
+              <span>v</span>
+            </a>
+            </div>
+          </div>
+          </div>
+        </div>
+
         <div class="catalog-products-container">
-        <div class="catalog-left-column">
-          <h2 class="filters">фильтр:</h2>
+        <div class="catalog-left-column"> 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
@@ -176,28 +203,6 @@
         </div>
 
       <div class="catalog-right-column">
-      <div class="sorting">
-        <form class="sorting-type">
-          <label class="sorting-title" for="sorting">Сортировка</label>
-          <select class="select-control" id="sorting" name="sorting">
-          <a class="sorting-link" href="#">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </a>
-          </select>
-        </form>
-
-        <div class="sorting-box">
-        <a class="sort-link" href="#">
-          <span>^</span>
-        </a>
-        <a class="sort-link sort-link-current" href="#">
-          <span>v</span>
-        </a>
-        </div>
-      </div>
-
         <h2 class="visually-hidden">Каталог с карточками товаров</h2>
         <ul class="product-list">
           <li class="product-item">
