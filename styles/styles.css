@@ -64,7 +64,7 @@ body {
   background: #FFE17F;
   margin: 0 auto;
   width: 1160px;
-  height: 400px;
+  height: 500px;
 }
 
 .header-catalog {
@@ -226,24 +226,21 @@ body {
 }
 
 /* Полное меню на Главной-начало*/
-.navigation-list-full {
-  margin: 0 auto;
-  padding: 0;
-  width: 1041px;
-  height: 120px;
-  margin-bottom: 270px;
-}
 
 .catalog-header-full {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;  
+  width: 1041px;
+  height: 120px;
+  margin-bottom: 270px;
 }
 
 .catalog-header-link {
+  display: block;
   text-decoration: none;
   font-family: Rubik;
   font-style: normal;
@@ -251,6 +248,8 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #000000;
+  height: 40px;
+  width: max-content;
 }
 /* Полное меню на Главной-конец*/
 
@@ -1228,6 +1227,7 @@ footer {
   justify-content: center;
   width: 1160px;
   padding: 0;
+  margin-bottom: 31px;
 }
 
 .navigation-footer-list {
