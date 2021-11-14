@@ -700,10 +700,10 @@ button {
 .slider-main.active {
   display: grid;
   grid-template-columns: 560px 41px auto auto auto 49px;
-  grid-template-rows: 92px auto auto auto auto; /*4 строка была 70*/
+  grid-template-rows: 68px 68px 23px min-content 25px 20px 70px auto;
   width: 1160px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 74px;
   margin-top: -68px;
   position: relative;
 }
@@ -742,13 +742,13 @@ button {
   grid-column: 3 / -1;
   grid-row: 1 / 3;
   margin-top: 40px;
-  margin-bottom: 30px;
 }
 
 .slider-main-text {
   grid-column: 3 / -1;
-  grid-row: 2 / 4;
+  grid-row: 4 / 5;
   margin: 0;
+  padding: 0;
   align-self: center;
 }
 
@@ -815,7 +815,7 @@ button {
   text-decoration: none;
   padding: 1px 37px;
   grid-column: 3 / 4;
-  grid-row: 4 / 5;
+  grid-row: 6 / 7;
   position: relative;
   z-index: 0;
 }
@@ -824,9 +824,9 @@ button {
   content: "";
   position: absolute;
   background: #ffe17f;
-  top: 15%;
+  top: 35%;
   right: 0;
-  bottom: 65%;
+  bottom: 25%;
   left: 0;
   margin: auto;
   z-index: -1;
@@ -881,24 +881,23 @@ button {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 3px;
   margin-left: auto;
   padding: 0;
   list-style-type: none;
   grid-column: 5 / -2;
-  grid-row: 4 / 5;
+  grid-row: 6 / 7;
   justify-self: center;
-  align-self: center;
-  margin-top: 15px;
+  align-self: flex-start;
 }
 
 .slider-pagination-item {
-  margin-right: 20px;
+  margin-right: 19px;
   line-height: 0;
 }
 
 .slider-pagination-item:last-child {
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .slider-pagination-button {
@@ -938,10 +937,15 @@ button {
   grid-column: 3 / -1;
   grid-row: -2 / -1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 160px));
   width: 560px;
   margin: 0;
   padding: 0;
+}
+
+.details-box {
+  margin-right: 20px;
+  white-space: nowrap;
 }
 
 .details-term {
@@ -950,18 +954,17 @@ button {
   color: #000000;
   grid-row: 1 / 2;
   margin: 0;
+  padding: 0;
   margin-bottom: 11px;
   height: 30px;
 }
 
 .details-description {
+  font-size: 16px;
+  line-height: 30px;
   grid-row: 2 / 3;
   margin: 0;
   height: 30px;
-}
-
-.details-description:not(:last-child) {
-  margin-right: 20px;
 }
 
 .product-categories {
@@ -987,7 +990,6 @@ button {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
-  text-align: center;
   outline: none;
 }
 
@@ -1008,6 +1010,10 @@ button {
   height: 160px;
   margin: 0;
   margin-bottom: 33px;
+}
+
+.product-categories-link:nth-child(2) .product-img-background {
+  align-items: flex-end;
 }
 
 .product-img-background:hover {
@@ -1062,7 +1068,7 @@ button {
   padding: 0;
   width: 1160px;
   height: 288px;
-  margin-top: -25px;
+  margin-top: -27px;
   background-image: url("../images/purchase/delivery-man.svg");
   background-repeat: no-repeat;
   background-size: 136px 164px;
@@ -1092,12 +1098,12 @@ button {
   position: absolute;
   content: "";
   width: 7px;
-  height: 319px;
+  height: 320px;
   background-color: #000000;
   top: 0;
   right: auto;
-  left: 280px;
-  bottom: 110px;
+  left: 275px;
+  bottom: 125px;
   margin: auto;
 }
 
@@ -1141,9 +1147,9 @@ button {
   content: "";
   position: absolute;
   background: #000000;
-  top: -15px;
+  top: -12px;
   right: 0;
-  bottom: -15px;
+  bottom: -6px;
   left: 0;
   margin: auto;
   z-index: -1;
@@ -1224,7 +1230,6 @@ button {
   grid-row: 1 / 2;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
-  line-height: 50px;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -1236,6 +1241,7 @@ button {
   grid-row: 2 / 4;
   margin: 0;
   padding: 0;
+  margin-top: -19px;
 }
 
 .advantage {
@@ -1265,6 +1271,7 @@ button {
   border-radius: 50%;
   align-self: center;
   margin-right: 31px;
+  margin-left: 50px;
 }
 
 .advantage-text {
@@ -1274,11 +1281,11 @@ button {
   line-height: 23px;
   color: #000000;
   text-decoration: none;
-  padding-top: 37px;
-  text-align: center;
+  padding-top: 35px;
   text-transform: uppercase;
   margin: 0 auto;
   outline: none;
+  letter-spacing: 0.2em;
 }
 
 .advantage:hover {
@@ -1861,7 +1868,7 @@ button {
   margin: 0;
   padding: 0;
   margin-top: 42px;
-  margin-bottom: 53px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -1881,7 +1888,7 @@ button {
 .about-text {
   margin: 0;
   padding: 0;
-  padding-bottom: 35px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -1900,10 +1907,10 @@ button {
 .delivery-services-list {
   margin: 0;
   padding: 0;
-  margin-top: 35px;
+  margin-top: 76px;
   margin-bottom: 70px;
   list-style-type: none;
-  margin-left: 26px;
+  margin-left: 36px;
 }
 
 .delivery-services-item {
@@ -1911,7 +1918,7 @@ button {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -1925,8 +1932,8 @@ button {
   width: 8px;
   height: 7px;
   background: #ffc700;
-  top: 6px;
-  left: -26px;
+  top: 12%;
+  left: -7%;
   border-radius: 50%;
 }
 
@@ -1940,7 +1947,7 @@ button {
   color: #000000;
   margin: 0;
   text-decoration: none;
-  padding: 1px 12px;
+  padding: 1px 20px;
   position: relative;
 }
 
@@ -2013,7 +2020,7 @@ button {
   margin: 0;
   padding: 0;
   margin-top: 42px;
-  margin-bottom: 53px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -2075,13 +2082,13 @@ button {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 67px;
+  margin-bottom: 61px;
 }
 
 .contacts-shedule-item {
   margin: 0;
   padding: 0;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .contacts-shedule-item:last-child {
@@ -2168,7 +2175,7 @@ button {
   flex-direction: column;
   margin: 0 auto;
   width: 1160px;
-  padding-top: 75px;
+  padding-top: 70px;
   padding-bottom: 131px;
 }
 
@@ -2190,13 +2197,14 @@ button {
   width: 601px;
   margin: 0;
   padding: 0;
-  padding-bottom: 53px;
+  padding-bottom: 56px;
 }
 
 .subscription-text {
   width: 560px;
   margin: 0;
   padding: 0;
+  margin-top: 9px;
 }
 
 .email-form {
@@ -2277,7 +2285,7 @@ button {
   margin: 0;
   padding: 0;
   padding-left: 35px;
-  align-self: flex-end;
+  align-self: center;
   background-image: url("../images/ok.svg");
   background-repeat: no-repeat;
   background-size: 14px 14px;
@@ -2321,7 +2329,6 @@ button {
   position: absolute;
   content: url("../images/breadcrumbs-arrow.svg");
   top: 0;
-  right: -20px;
   width: 4px;
   height: 7px;
 }
@@ -2360,7 +2367,7 @@ button {
 }
 
 .catalog-products {
-  background: linear-gradient(to right, #ebebeb 35%, #ffffff 35%, #ffffff 100%);
+  background: linear-gradient(to right, #ebebeb 33%, #ffffff 33%, #ffffff 100%);
 }
 
 .catalog-products-container {
@@ -2372,7 +2379,7 @@ button {
 }
 
 .filters-sorting {
-  background: linear-gradient(to right, #dcdcdc, 35%, #ebebeb 35%, #ebebeb 100%);
+  background: linear-gradient(to right, #dcdcdc, 33%, #ebebeb 33%, #ebebeb 100%);
   margin-bottom: 65px;
 }
 
