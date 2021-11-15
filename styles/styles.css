@@ -624,21 +624,23 @@ button {
 /* Полное меню на Главной*/
 
 .submenu-popup {
-  display: flex;
-  width: 1160px;
-  height: 180px;
-  background: #ffe17f;
-  z-index: 1;
-  margin-top: -30px;
-  width: 1055px;
-  height: 120px;
-  padding: 21px 60px 40px 45px;
   display: none;
+  z-index: 1;
 }
 
 .submenu-popup-open {
   display: block;
+}
+
+.submenu-popup-content {
   display: flex;
+  width: 1160px;
+  height: 180px;
+  background: #ffe17f;
+  margin-top: -30px;
+  width: 1055px;
+  height: 120px;
+  padding: 21px 60px 40px 45px;
 }
 
 .submenu-header {
@@ -1292,7 +1294,6 @@ button {
   align-self: center;
   left: auto;
   right: 0;
-
 }
 
 .advantage-text {
