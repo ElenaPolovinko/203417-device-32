@@ -416,7 +416,7 @@ button {
   color: #000000;
   text-decoration: none;
   opacity: 0.3;
-  padding: 10px 4px;
+  padding: 10px 5px;
 }
 
 .navigation-user-link-exit:hover {
@@ -441,13 +441,14 @@ button {
   background: #000000;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 40px;
-  left: -135px;
+  top: 130px;
+  right: 120px;
   display: none;
 }
 
 .cart-popup-open {
   display: block;
+  z-index: 1;
 }
 
 .cart-popup-list {
@@ -618,29 +619,32 @@ button {
   margin-right: -13px;
 }
 
-
 /* Полное меню на Главной*/
 
 .submenu-popup {
+  display: flex;
   width: 1160px;
   height: 180px;
   background: #ffe17f;
   z-index: 1;
   margin-top: -30px;
+  width: 1055px;
+  height: 120px;
+  padding: 21px 60px 40px 45px;
   display: none;
 }
 
 .submenu-popup-open {
   display: block;
+  display: flex;
 }
 
 .submenu-header {
   display: flex;
+  flex-direction: column;
   list-style-type: none;
   margin: 0;
-  padding: 21px 60px 40px 60px;
-  width: 1041px;
-  height: 120px;
+  padding: 0;
 }
 
 .column {
@@ -749,7 +753,8 @@ button {
   grid-row: 4 / 5;
   margin: 0;
   padding: 0;
-  align-self: center;
+  padding-top: 9px;
+  align-self: start;
 }
 
 .slider-button {
@@ -813,7 +818,7 @@ button {
   color: #000000;
   margin: 0;
   text-decoration: none;
-  padding: 1px 37px;
+  padding: 0 37px;
   grid-column: 3 / 4;
   grid-row: 6 / 7;
   position: relative;
@@ -881,7 +886,7 @@ button {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 3px;
+  margin: 0 3px;
   margin-left: auto;
   padding: 0;
   list-style-type: none;
@@ -1244,6 +1249,10 @@ button {
   margin-top: -19px;
 }
 
+.advantage-delivery {
+  position: relative;
+}
+
 .advantage {
   display: flex;
   margin: 0 auto;
@@ -1258,20 +1267,27 @@ button {
 }
 
 .advantage-icon {
-  width: 125px;
-  height: 100px;
+  position: absolute;
+  width: 47px;
+  height: 31px;
+  padding: 35px 39px;
   background: #ffe17f;
+  right: auto;
+  left: 0;
 }
 
 .info-icon {
+  position: absolute;
   width: 40px;
   height: 40px;
-  background: #ffe17f;
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
   align-self: center;
   margin-right: 31px;
   margin-left: 50px;
+  left: auto;
+  right: 140px;
+  top: 29px;
 }
 
 .advantage-text {
@@ -2367,7 +2383,7 @@ button {
 }
 
 .catalog-products {
-  background: linear-gradient(to right, #ebebeb 33%, #ffffff 33%, #ffffff 100%);
+  background: linear-gradient(to right, #ebebeb 35%, #ffffff 35%, #ffffff 100%);
 }
 
 .catalog-products-container {
@@ -2379,7 +2395,7 @@ button {
 }
 
 .filters-sorting {
-  background: linear-gradient(to right, #dcdcdc, 33%, #ebebeb 33%, #ebebeb 100%);
+  background: linear-gradient(to right, #dcdcdc, 35%, #ebebeb 35%, #ebebeb 100%);
   margin-bottom: 65px;
 }
 
