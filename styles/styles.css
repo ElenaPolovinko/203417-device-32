@@ -78,7 +78,7 @@ button {
   background: #ffe17f;
   margin: 0 auto;
   width: 1160px;
-  height: 300px;
+  height: 100%;
 }
 
 .header-catalog {
@@ -110,7 +110,7 @@ button {
   margin: 0 auto;
   padding: 0;
   width: 1041px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .navigation-user {
@@ -121,6 +121,8 @@ button {
   list-style-type: none;
   width: 535px;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 5px;
 }
 
 .navigation-container-2 {
@@ -128,8 +130,11 @@ button {
   margin: 0 auto;
   padding: 0;
   width: 1041px;
-  align-items: center;
-  margin-bottom: 37px;
+  margin-bottom: 137px;
+}
+
+.navigation-container-2.catalog {
+  margin-bottom: 23px;
 }
 
 .search {
@@ -265,11 +270,20 @@ button {
 
 .catalog-header {
   display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   margin-right: auto;
-  width: 540px;
+  width: 530px;
+  z-index: 1;
+}
+
+.catalog-header-item {
   position: relative;
+  display: block;
+  width: 540px;
+  margin-bottom: 25px;
 }
 
 .catalog-header-title {
@@ -290,7 +304,7 @@ button {
   border-radius: 25px;
 }
 
-.catalog-header:active .catalog-header-title {
+.catalog-header-item:active .catalog-header-title {
   outline: none;
   opacity: 0.3;
 }
@@ -302,6 +316,8 @@ button {
   box-sizing: border-box;
   border-radius: 50%;
   outline: none;
+  position: absolute;
+  top: -9px;
 }
 
 .catalog-header-button::before {
@@ -310,7 +326,7 @@ button {
   width: 16px;
   height: 2px;
   background: rgba(0, 0, 0, 0.2);
-  left: 263px;
+  left: 15px;
 }
 
 .catalog-header-button::after {
@@ -319,52 +335,55 @@ button {
   width: 2px;
   height: 16px;
   background: rgba(0, 0, 0, 0.2);
-  left: 270px;
-  bottom: 17px;
+  bottom: 14px;
+  left: 22px;
 }
 
-.catalog-header:hover .catalog-header-button {
+.catalog-header-item:hover .catalog-header-button {
   border: 2px solid #000000;
 }
 
-.catalog-header:hover .catalog-header-button::before {
+.catalog-header-item:hover .catalog-header-button::before {
   background: #000000;
 }
 
-.catalog-header:hover .catalog-header-button::after {
+.catalog-header-item:hover .catalog-header-button::after {
   opacity: 0;
 }
 
-.catalog-header:active .catalog-header-title,
-.catalog-header:active .catalog-header-button::before {
+.catalog-header-item:active .catalog-header-title,
+.catalog-header-item:active .catalog-header-button::before {
   opacity: 0.3;
 }
 
-.catalog-header:active .catalog-header-button {
+.catalog-header-item:active .catalog-header-button {
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.catalog-header:active .catalog-header-button::after {
+.catalog-header-item:active .catalog-header-button::after {
   opacity: 0;
 }
 
 .navigation-user-item {
-  max-height: 20px;
   position: relative;
+  margin-right: auto;
+}
+
+.navigation-user-item:first-child {
   margin-right: 0;
 }
 
 .navigation-user-item:last-child {
   margin-right: 0;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .navigation-user-item.entrance {
   margin-right: auto;
 }
 
-.navigation-user-item.exit {
-  margin-right: 28px;
+.navigation-user-item.compare {
+  margin-right: 16px;
 }
 
 .navigation-user-icon {
@@ -417,7 +436,7 @@ button {
   color: #000000;
   text-decoration: none;
   opacity: 0.3;
-  padding: 10px 5px;
+  padding: 10px;
 }
 
 .navigation-user-link-exit:hover {
@@ -581,7 +600,7 @@ button {
 
 .navigation-link {
   display: block;
-  padding: 10px;
+  padding: 6px 10px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -624,13 +643,17 @@ button {
 /* Полное меню на Главной*/
 
 .submenu-popup {
-  display: none;
   z-index: 1;
+  margin-top: -100px;
+  position: absolute;
+  top: 175px;
+  left: -60px;
+  display: none;
 }
 
-.submenu-popup-open {
+/*.submenu-popup-open {
   display: block;
-}
+}*/
 
 .submenu-popup-content {
   display: flex;
@@ -682,6 +705,10 @@ button {
   outline: none;
   border-radius: 0;
   opacity: 0.3;
+}
+
+.dropdown:hover .submenu-popup {
+  display: block;
 }
 
 .main-container-index {
@@ -1060,8 +1087,7 @@ button {
 
 .purchase-terms {
   background: #f0f0f0;
-  margin-bottom: 90px;
-  height: 288px;
+  margin-bottom: 112px;
   display: none;
 }
 
@@ -1072,12 +1098,12 @@ button {
 .purchase-container {
   display: grid;
   grid-template-columns: 280px 116px 500px 61px 136px;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: max-content auto auto;
   margin: 0 auto;
   padding: 0;
   width: 1160px;
-  height: 288px;
   margin-top: -27px;
+  min-height: 288px;
   background-image: url("../images/purchase/delivery-man.svg");
   background-repeat: no-repeat;
   background-size: 136px 164px;
@@ -1109,10 +1135,9 @@ button {
   width: 7px;
   height: 320px;
   background-color: #000000;
-  top: 0;
+  top: -27%;
   right: auto;
-  left: 275px;
-  bottom: 125px;
+  left: 172%;
   margin: auto;
 }
 
@@ -1157,13 +1182,16 @@ button {
   position: absolute;
   background: #000000;
   top: -12px;
-  right: 0;
-  bottom: -6px;
+  right: -120px;
+  bottom: -8px;
   left: 0;
   margin: auto;
   z-index: -1;
-  width: 280px;
   color: #ffe17f;
+}
+
+.crossed-out-current:hover {
+  color: #000000;
 }
 
 .crossed-out-current:focus::after {
@@ -1187,9 +1215,9 @@ button {
   content: "";
   position: absolute;
   background: #ffc700;
-  top: -15px;
+  top: -12px;
   right: 0;
-  bottom: -15px;
+  bottom: -8px;
   left: 0;
   margin: auto;
   z-index: -1;
@@ -1242,7 +1270,8 @@ button {
   color: #000000;
   margin: 0;
   padding: 0;
-  padding-top: 5px;
+  margin-top: 5px;
+  margin-bottom: 43px;
 }
 
 .purchase-terms-text {
@@ -1250,7 +1279,6 @@ button {
   grid-row: 2 / 4;
   margin: 0;
   padding: 0;
-  margin-top: -19px;
 }
 
 .advantage-container {
@@ -1259,7 +1287,7 @@ button {
   width: 1160px;
   height: 100px;
   margin: 0 auto;
-  margin-bottom: 97px;
+  margin-bottom: 107px;
 }
 
 .advantage {
@@ -1381,7 +1409,6 @@ button {
 }
 
 .modal-advantage-delivery {
-  margin: 0 auto;
   width: 920px;
   height: 580px;
   background: #ffffff;
@@ -1389,6 +1416,12 @@ button {
   box-sizing: border-box;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 72px 80px 88px 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .delivery-title-box {
@@ -1890,7 +1923,7 @@ button {
   margin: 0;
   padding: 0;
   margin-top: 42px;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
   position: relative;
 }
 
@@ -1902,7 +1935,7 @@ button {
   background-color: #000000;
   top: 0;
   right: auto;
-  bottom: 130px;
+  bottom: 143px;
   left: 0;
   margin: auto;
 }
@@ -1910,7 +1943,7 @@ button {
 .about-text {
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   position: relative;
 }
 
@@ -2042,7 +2075,7 @@ button {
   margin: 0;
   padding: 0;
   margin-top: 42px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   position: relative;
 }
 
@@ -2054,7 +2087,7 @@ button {
   background-color: #000000;
   top: 0;
   right: auto;
-  bottom: 130px;
+  bottom: 143px;
   left: 0;
   margin: auto;
 }
@@ -2255,7 +2288,29 @@ button {
 .email-form:focus {
   outline: none;
   background: #dcdcdc;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  border-bottom: 3px solid;
+  border-color: rgba(0, 0, 0, 0.02);
+}
+
+.email-form:focus::-webkit-input-placeholder {
+  color: #444444;
+  opacity: 0.5;
+}
+
+.email-form:focus:-moz-placeholder {
+  color: #444444;
+  opacity: 0.5;
+}
+
+.email-form:focus::-moz-placeholder {
+  color: #444444;
+  opacity: 0.5;
+}
+
+.email-form:focus:-ms-input-placeholder {
+  color: #444444;
+  opacity: 0.5;
 }
 
 .email-form:active {
@@ -2389,7 +2444,7 @@ button {
 }
 
 .catalog-products {
-  background: linear-gradient(to right, #ebebeb 35%, #ffffff 35%, #ffffff 100%);
+  background: linear-gradient(to right, #ebebeb 32%, #ffffff 32%, #ffffff 100%);
 }
 
 .catalog-products-container {
@@ -2401,7 +2456,7 @@ button {
 }
 
 .filters-sorting {
-  background: linear-gradient(to right, #dcdcdc, 35%, #ebebeb 35%, #ebebeb 100%);
+  background: linear-gradient(to right, #dcdcdc, 32%, #ebebeb 32%, #ebebeb 100%);
   margin-bottom: 65px;
 }
 
@@ -2410,10 +2465,10 @@ button {
   margin: 0 auto;
   padding: 0;
   width: 1100px;
-  height: 70px;
+  min-height: 70px;
   align-items: center;
-  padding-left: 60px;
   line-height: 0;
+  padding-left: 60px;
 }
 
 .filters {
@@ -2423,10 +2478,11 @@ button {
   text-transform: uppercase;
   color: #000000;
   letter-spacing: 0.2em;
-  text-align: center;
   margin: 0;
   padding: 0;
-  margin-right: 173px;
+  max-width: 260px;
+  min-width: 255px;
+  padding-bottom: 4px;
 }
 
 .catalog-filter {
@@ -2711,14 +2767,15 @@ button {
 
 .sorting {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  height: 70px;
 }
 
 .sorting-type {
   margin: 0;
   padding: 0;
-  margin-left: 72px;
+  margin-left: 85px;
 }
 
 .select-control {
@@ -2732,8 +2789,7 @@ button {
   border: none;
   outline: none;
   background: #ebebeb;
-  margin-left: 36px;
-  margin-right: auto;
+  margin-left: 30px;
   padding: 1px 12px 8px 13px;
 }
 
@@ -2753,6 +2809,7 @@ button {
 .sorting-box {
   display: flex;
   margin-left: 324px;
+  padding-bottom: 7px;
 }
 
 .sort-link {
@@ -2761,8 +2818,7 @@ button {
   height: 10px;
   text-decoration: none;
   position: relative;
-  padding: 2px;
-  margin-right: 13px;
+  margin-right: 19px;
 }
 
 .sort-link:last-child {
@@ -2776,7 +2832,10 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+}
+
+.sort-link.sorting-icon:last-child {
+  bottom: 5px;
 }
 
 .sort-link:hover .sorting-icon path {
@@ -3081,7 +3140,8 @@ button {
   text-transform: uppercase;
   color: #000000;
   width: 760px;
-  height: 55px;
+  min-height: 55px;
+  padding: 5px;
   margin-bottom: 51px;
   border: 3px solid rgba(0, 0, 0, 0.1);
 }
@@ -3308,6 +3368,7 @@ footer {
 .phone-number-link {
   align-self: center;
   margin-left: auto;
+  max-width: 213px;
 }
 
 .footer-social-list {
