@@ -30,9 +30,14 @@
   font-display: swap;
 }
 
+:root {
+  --card-gradient: rgba (240, 240, 240, 0.8);
+  --filters-gradient: #ebebeb;
+}
+
 html {
   height: 100%;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 body {
@@ -64,14 +69,6 @@ img {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  background: none;
-  box-sizing: border-box;
 }
 
 .header-main-page {
@@ -175,6 +172,11 @@ button {
   width: 32px;
   height: 100%;
   align-self: center;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  box-sizing: border-box;
 }
 
 .search-string {
@@ -210,6 +212,9 @@ button {
   right: 0;
   pointer-events: visible;
   border-radius: 0 20px 20px 0;
+  border: none;
+  cursor: pointer;
+  background: none;
 }
 
 .form-border {
@@ -318,6 +323,9 @@ button {
   outline: none;
   position: absolute;
   top: -9px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
 }
 
 .catalog-header-button::before {
@@ -520,7 +528,6 @@ button {
 }
 
 .cart-popup-link.icon:focus {
-  background: url(".jpg");
   outline: 5px solid #af4fff;
 }
 
@@ -538,6 +545,10 @@ button {
 .delete-product {
   margin-left: 18px;
   padding: 7px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .delete-product:hover {
@@ -644,23 +655,16 @@ button {
 
 .submenu-popup {
   z-index: 1;
-  margin-top: -100px;
   position: absolute;
-  top: 175px;
+  top: 45px;
   left: -60px;
   display: none;
+  height: 181px;
 }
-
-/*.submenu-popup-open {
-  display: block;
-}*/
 
 .submenu-popup-content {
   display: flex;
-  width: 1160px;
-  height: 180px;
   background: #ffe17f;
-  margin-top: -30px;
   width: 1055px;
   height: 120px;
   padding: 21px 60px 40px 45px;
@@ -794,6 +798,9 @@ button {
   height: 80px;
   border: none;
   padding: 10px;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .slider-prev {
@@ -854,6 +861,10 @@ button {
   grid-row: 6 / 7;
   position: relative;
   z-index: 0;
+  border: none;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .more::after {
@@ -944,10 +955,12 @@ button {
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 50%;
+  cursor: pointer;
+  background: none;
 }
 
 .slider-pagination-button:hover {
-  border: 2px solid rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(48, 33, 33, 0.6);
   box-sizing: border-box;
 }
 
@@ -1071,7 +1084,7 @@ button {
   background: #ffc700;
 }
 
-.product-categories-link:active .product-img-background img {
+.product-categories-link:active .product-categories-img {
   outline: none;
   opacity: 0.3;
 }
@@ -1159,6 +1172,10 @@ button {
   position: relative;
   z-index: 1;
   outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .crossed-out::after {
@@ -1322,6 +1339,10 @@ button {
   align-self: center;
   left: auto;
   right: 0;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .advantage-text {
@@ -1449,6 +1470,9 @@ button {
   background: none;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .button-close-icon {
@@ -1769,6 +1793,9 @@ button {
   margin: 0;
   padding: 15px;
   margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .info:focus {
@@ -1832,6 +1859,10 @@ button {
   height: 16px;
   padding: 16px;
   position: relative;
+  border: none;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .button-minus {
@@ -2162,6 +2193,10 @@ button {
   text-decoration: none;
   padding: 1px 34px;
   position: relative;
+  border: none;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .write-us::after {
@@ -2339,6 +2374,9 @@ button {
   border: 3px solid rgba(0, 0, 0, 0.1);
   margin: 0;
   margin-left: -5px;
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .subscribe:hover {
@@ -2444,7 +2482,7 @@ button {
 }
 
 .catalog-products {
-  background: linear-gradient(to right, #ebebeb 32%, #ffffff 32%, #ffffff 100%);
+  background: linear-gradient(to right, #ebebeb 33%, #ffffff 33%, #ffffff 100%);
 }
 
 .catalog-products-container {
@@ -2453,11 +2491,12 @@ button {
   padding: 0;
   width: 1100px;
   padding-left: 60px;
+  background: linear-gradient(to right, #ebebeb 322px, #ffffff 322px, #ffffff 1100px);
+  padding-top: 60px;
 }
 
 .filters-sorting {
-  background: linear-gradient(to right, #dcdcdc, 32%, #ebebeb 32%, #ebebeb 100%);
-  margin-bottom: 65px;
+  background: linear-gradient(to right, #dcdcdc 33%, var(--filters-gradient) 33%, var(--filters-gradient) 100%);
 }
 
 .filters-sorting-container {
@@ -2469,6 +2508,7 @@ button {
   align-items: center;
   line-height: 0;
   padding-left: 60px;
+  background: linear-gradient(to right, #dcdcdc 322px, var(--filters-gradient) 322px, var(--filters-gradient) 1100px);
 }
 
 .filters {
@@ -2480,8 +2520,8 @@ button {
   letter-spacing: 0.2em;
   margin: 0;
   padding: 0;
-  max-width: 260px;
-  min-width: 255px;
+  max-width: 265px;
+  min-width: 260px;
   padding-bottom: 4px;
 }
 
@@ -2606,6 +2646,8 @@ button {
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
 }
 
 .range-toggle:hover {
@@ -2761,8 +2803,9 @@ button {
   margin: 0;
   padding: 0;
   flex-direction: column;
-  padding-right: 69px;
   z-index: 0;
+  max-width: 265px;
+  min-width: 260px;
 }
 
 .sorting {
@@ -2808,7 +2851,7 @@ button {
 
 .sorting-box {
   display: flex;
-  margin-left: 324px;
+  margin-left: 311px;
   padding-bottom: 7px;
 }
 
@@ -3101,7 +3144,7 @@ button {
 .more-link {
   position: absolute;
   padding: 178px 83px;
-  background: linear-gradient(0deg, rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url(".jpg");
+  background: linear-gradient(0deg, var(--card-gradient), var(--card-gradient)), url (".jpg");
   opacity: 0;
 }
 
@@ -3144,6 +3187,9 @@ button {
   padding: 5px;
   margin-bottom: 51px;
   border: 3px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background: none;
+  box-sizing: border-box;
 }
 
 .show-more:hover {
@@ -3253,7 +3299,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 1160px;
+  width: 1175px;
   justify-content: space-between;
   align-items: center;
   margin-top: 62px;
@@ -3262,7 +3308,8 @@ footer {
 
 .logo-footer {
   align-self: flex-start;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
+  padding: 0 7px;
 }
 
 .footer-navigation-container-1 {
@@ -3271,7 +3318,7 @@ footer {
   align-items: center;
   width: 1160px;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .footer-navigation-container-2 {
@@ -3441,13 +3488,12 @@ footer {
   text-align: right;
   color: #ffffff;
   text-decoration: none;
-  padding: 1px 15px;
-  margin-right: -15px;
+  padding: 1px 4px;
 }
 
 .logo-htmlacademy {
   margin: 0;
-  margin-left: 380px;
+  margin-left: 387px;
 }
 
 .phone-number-link:hover {
@@ -3470,9 +3516,8 @@ footer {
 .logo-htmlacademy-link {
   display: block;
   width: 115px;
-  height: 33px;
-  padding: 10px;
-  margin-right: -10px;
+  height: 28px;
+  padding: 5px 3px;
 }
 
 .logo-htmlacademy-link:hover .logo-htmlacademy-icon path {
@@ -3481,7 +3526,7 @@ footer {
 
 .logo-htmlacademy-link:focus {
   outline: 2px solid #af4fff;
-  width: 135px;
+  width: 121px;
   height: 53px;
   box-sizing: border-box;
   border-radius: 10px;
