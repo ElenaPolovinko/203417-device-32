@@ -31,7 +31,7 @@
 }
 
 :root {
-  --card-gradient: rgba (240, 240, 240, 0.8);
+  --card-gradient: rgba(240, 240, 240, 0.8);
   --filters-gradient: #ebebeb;
 }
 
@@ -131,7 +131,7 @@ img {
 }
 
 .navigation-container-2.catalog {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .search {
@@ -739,10 +739,10 @@ img {
 .slider-main.active {
   display: grid;
   grid-template-columns: 560px 41px auto auto auto 49px;
-  grid-template-rows: 68px 68px 23px min-content 25px 20px 70px auto;
+  grid-template-rows: 68px 68px 23px min-content 17px 22px 68px auto;
   width: 1160px;
   margin: 0 auto;
-  margin-bottom: 74px;
+  margin-bottom: 72px;
   margin-top: -68px;
   position: relative;
 }
@@ -871,9 +871,9 @@ img {
   content: "";
   position: absolute;
   background: #ffe17f;
-  top: 35%;
+  top: 4px;
   right: 0;
-  bottom: 25%;
+  bottom: 10px;
   left: 0;
   margin: auto;
   z-index: -1;
@@ -1994,7 +1994,7 @@ img {
   margin: 0;
   padding: 0;
   margin-top: 76px;
-  margin-bottom: 70px;
+  margin-bottom: 69px;
   list-style-type: none;
   margin-left: 36px;
 }
@@ -2174,7 +2174,7 @@ img {
 .contacts-shedule-item {
   margin: 0;
   padding: 0;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .contacts-shedule-item:last-child {
@@ -2492,7 +2492,7 @@ img {
   width: 1100px;
   padding-left: 60px;
   background: linear-gradient(to right, #ebebeb 322px, #ffffff 322px, #ffffff 1100px);
-  padding-top: 60px;
+  padding-top: 65px;
 }
 
 .filters-sorting {
@@ -2522,7 +2522,7 @@ img {
   padding: 0;
   max-width: 265px;
   min-width: 260px;
-  padding-bottom: 4px;
+  padding-bottom: 7px;
 }
 
 .catalog-filter {
@@ -2545,6 +2545,7 @@ img {
   padding: 1px 35px;
   position: relative;
   margin-top: 49px;
+  width: min-content;
 }
 
 .show-icon::after {
@@ -2818,7 +2819,8 @@ img {
 .sorting-type {
   margin: 0;
   padding: 0;
-  margin-left: 85px;
+  margin-left: 80px;
+  padding-bottom: 4px;
 }
 
 .select-control {
@@ -2851,8 +2853,8 @@ img {
 
 .sorting-box {
   display: flex;
-  margin-left: 311px;
-  padding-bottom: 7px;
+  margin-left: 324px;
+  padding-bottom: 10px;
 }
 
 .sort-link {
@@ -3026,7 +3028,7 @@ img {
 }
 
 .catalog-right-column {
-  margin-left: 72px;
+  margin-left: 80px;
 }
 
 .product-list {
@@ -3144,7 +3146,7 @@ img {
 .more-link {
   position: absolute;
   padding: 178px 83px;
-  background: linear-gradient(0deg, var(--card-gradient), var(--card-gradient)), url (".jpg");
+  background: linear-gradient(0deg, var(--card-gradient), var(--card-gradient));
   opacity: 0;
 }
 
@@ -3159,6 +3161,7 @@ img {
   color: #444444;
   margin-left: auto;
   align-self: flex-start;
+  padding-top: 2px;
 }
 
 .product-card-title {
@@ -3340,7 +3343,7 @@ footer {
   margin: auto;
   right: auto;
   left: 0;
-  top: 0;
+  top: 6px;
   bottom: 0;
 }
 
@@ -3409,6 +3412,10 @@ footer {
 
 .address-text {
   position: relative;
+}
+
+.address-footer {
+  padding-top: 7px;
 }
 
 .phone-number,
@@ -3488,7 +3495,7 @@ footer {
   text-align: right;
   color: #ffffff;
   text-decoration: none;
-  padding: 1px 4px;
+  padding: 1px 2px;
 }
 
 .logo-htmlacademy {
@@ -3517,7 +3524,7 @@ footer {
   display: block;
   width: 115px;
   height: 28px;
-  padding: 5px 3px;
+  padding: 7px 2px;
 }
 
 .logo-htmlacademy-link:hover .logo-htmlacademy-icon path {
